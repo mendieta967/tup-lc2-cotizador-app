@@ -120,7 +120,7 @@ async function filtrarCotizacion() {
   if(filtroCotizacion.value === "todas") return cargarCotizacionesHoy()
   
 
-  let url = "https://dolarapi.com/v7/"
+  let url = "https://dolarapi.com/v1/"
   if(filtroCotizacion.value === "eur" || filtroCotizacion.value === "brl" || filtroCotizacion.value === "clp" || filtroCotizacion.value === "uyu" ) {
     url = url + "cotizaciones/"
   } else {
