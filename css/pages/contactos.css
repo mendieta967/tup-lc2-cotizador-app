@@ -1,0 +1,416 @@
+:root {
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+    --primario: #784d3c;
+    --blanco: #fff;
+    --negro: #070707;
+    --gris: #434242;
+    --fondo: #d3c5c5;
+}
+
+html, body {
+    box-sizing: border-box;
+    font-size: 62.5%; /* Para que 1rem = 10px */
+    height: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.barra_navegacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .barra_navegacion {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.nav_enlaces {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .nav_enlaces {
+        flex-direction: row;
+        margin-left: 5%;
+        gap: 2rem;
+    }
+}
+
+.navegacion_enlaces {
+    display: block;
+    color: #121212;
+    font-family: 'Georgia', serif;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.984);
+    padding: 10px 15px;
+    border-radius: 5px; 
+}
+
+.navegacion_enlaces:hover {
+    background-color: var(--gris);
+}
+
+.header {
+    background-image: url(../../img/cabecera.jpg);
+    height: 21rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.header_texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--negro);
+    text-align: center;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .header_texto {
+        flex-direction: row;
+        gap: 3rem;
+    }
+}
+
+.header .logo_imagen {
+    width: 8rem;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 768px) {
+    .header .logo_imagen {
+        width: 5rem; /* Reduce the size of the image */
+    }
+}
+
+.header .titulo {
+    font-size: 5rem;
+    color: #121212;
+    font-family: 'Georgia', serif;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.984);
+    border-bottom: 4px solid var(--blanco);
+    padding: 10px 15px;
+    border-radius: 5px; 
+}
+
+@media (min-width: 768px) {
+    .header .titulo {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header .titulo {
+        font-size: 2.5rem; /* Reduce the font size for smaller screens */
+    }
+}
+
+/*cuerpo de pagina*/
+@media (min-width: 768px) {
+    .contenedor_principal {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        justify-content: center;
+        height: 50vh;
+    }
+}
+
+main {
+    background-color: var(--primario);
+    color: var(--negro);
+    padding: 1rem 0;
+    flex-grow: 1;
+}
+
+.migas_pan {
+    text-align: end;
+    font-size: 10px;
+    margin-right: 5%;
+    color: var(--blanco);
+    text-shadow: 2px 2px 5px rgba(232, 250, 94, 0.984);
+    border-radius: 5px;
+}
+
+.migas_pan a {
+    color: var(--blanco);
+    margin-left: 5px;
+    text-decoration: none;
+    text-shadow: 2px 2px 5px rgba(232, 250, 94, 0.984);
+    border-radius: 5px;
+}
+
+.titulo_contactos {
+    text-align: center;
+    font-size: 25px;
+    color: var(--blanco);
+    font-family: 'Georgia', serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.984);
+    padding: 10px 15px;
+    border-radius: 5px; 
+
+}
+
+.formulario {
+    background-color: var(--fondo);
+    margin-top: 25px;
+    border-radius: 2em;
+    width: 60%;
+    height: 80%;
+    margin-left: 20%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
+}
+.contenedor_informacion{
+    margin-top: 45px;
+}
+.titulo_formulario {
+    font-size: 20px;
+    margin-left: 5%;
+}
+
+.nombre_contacto {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+    margin-bottom: 5%;
+    align-items: center;
+}
+
+.email_contactos {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+    margin-bottom: 5%;
+    align-items: center;
+    gap: 5%;
+}
+
+/* Estilo para el contenedor principal */
+.container {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+}
+
+#mensaje {
+    resize: none; /* Evita que el usuario pueda redimensionar el textarea */
+    width: 100%;
+    height: 100px;
+}
+
+/* Estilo para la etiqueta */
+label {
+    grid-row: 1; /* Coloca la etiqueta en la primera fila */
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+    margin-left: 180px;
+    margin-top: 10px;
+}
+
+.texto_main {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.contacto_contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    background-color: var(--fondo);
+    width: 50%;
+    height: 50%;
+    border-radius: 2em;
+    margin-left: 25%;
+}
+
+.datos_contacto h1 {
+    font-size: 18px;
+    margin-left: 25px;
+    margin-top: 20px;
+
+}
+
+.datos_contacto li {
+    list-style: none;
+    font-size: 11px;
+}
+
+.logo_utn {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+
+.logo_utn img {
+    width: 10rem;
+}
+
+@media (min-width: 768px) {
+    .contenedor_footer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+    }
+}
+footer {
+    background-color: var(--negro);
+    padding: 2rem 0;
+    color: var(--blanco);
+   
+}
+/*Contenedor1*/
+.contenedor{
+    margin-left:20%;
+}
+
+.contenedor_final{
+    text-align: right;
+    margin-right: 30%;
+    margin-top: 8%;
+}
+.contenedor_final h1{
+    font-size: 10px;
+}
+.contenedor_final_ul li{
+display: inline-block;
+justify-content: left;
+font-style: italic;
+
+}
+
+.contenedor_final li{
+    font-size: 15px;
+    list-style: none;
+    text-align: center;
+}
+.titulo_primero{
+    font-size: 15px;
+    margin-left: 10%;
+    
+}
+.contenedor li{
+    font-size: 10px;
+    list-style: none;
+
+}
+.contenedor li a{
+    color: var(--blanco);
+
+
+}
+.contenedor .final{
+    font-size: 10px;
+    margin-left: 45%;
+}
+.contenedor_info{
+    margin-left:20%;
+    font-size: 10px;
+    margin-top: 15%;
+}
+.pie_pagina{
+    background-color: var(--negro);
+    text-align: center;
+    color: var(--blanco);
+    padding: 3rem 0;
+    font-size: 15px;
+
+}
+
+/* CSS para pantallas pequeñas */
+@media (max-width: 767px) {
+    html {
+        font-size: 50%; /* Reducir el tamaño de fuente base para pantallas más pequeñas */
+    }
+
+    .header {
+        height: auto; /* Altura automática para adaptarse al contenido */
+        padding: 2rem 0; /* Agregar espacio en la parte superior e inferior */
+    }
+
+    .header .titulo {
+        font-size: 2.5rem; /* Reducir el tamaño del título */
+    }
+
+    .barra_navegacion {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav_enlaces {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        margin-left: 0;
+    }
+
+    .nav_enlaces a {
+        padding: 0.5rem 1rem; /* Espacio entre enlaces */
+    }
+
+    .formulario {
+        width: 90%; /* Ancho del formulario al 90% del contenedor */
+        margin: 0 auto; /* Centrar el formulario */
+        margin-bottom: 20px; /* Espacio inferior */
+    }
+
+    .contacto_contenedor {
+        width: 90%; /* Ancho del contenedor al 90% del contenedor */
+        margin: 0 auto; /* Centrar el contenedor */
+        display: flex; /* Cambiar a flexbox */
+        flex-direction: column; /* Dirección de columna */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contacto_contenedor .datos_contacto,
+    .contacto_contenedor .logo_utn {
+        align-items: center;
+
+    }
+
+    .datos_contacto h1 {
+        margin-left: 0;
+    }
+
+    .botones {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-left: 0;
+    }
+
+    .pie_pagina {
+        font-size: 12px; /* Reducir el tamaño del texto del pie de página */
+    }
+}

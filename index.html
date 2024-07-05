@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INICIO</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="contenedor_principal">
+        <div class="header">
+            <img class="logo_imagen" src="img/logo.png" alt="logo_imagen">
+            <h1 class="titulo">Cotizador de Monedas</h1>
+        </div>
+    </header>
+
+    <div class="contenido_principal">
+        <aside class="barra_lateral">
+
+            <div class="inicio">
+                <a href="index.html" class="enlace_inicio">
+                    <img src="img/inicio.png" alt="imagen_inicio" class="imagen_inicio">
+                    <span><b>INICIO</b></span>
+                </a>
+            </div>
+
+            <div class="miarchivo">
+                <a href="miarchivo.html" class="enlace_inicio">
+                    <img src="img/miarchivo.png" alt="imagen_inicio" class="imagen_inicio">
+                    <span><b>MI ARCHIVO</b></span>
+                </a>
+            </div>
+
+            <div class="miarchivo">
+                <a href="informes.html" class="enlace_inicio">
+                    <img src="img/informe.png" alt="imagen_inicio" class="imagen_inicio">
+                    <span><b>INFORMES</b></span>
+                </a>
+            </div>
+
+            <div class="miarchivo">
+                <a href="contactos.html" class="enlace_inicio">
+                    <img src="img/contactos.png" alt="imagen_inicio" class="imagen_contacto">
+                    <span><b>CONTACTOS</b></span>
+                </a>
+            </div>
+
+            <div class="contenedor_imagen_perfil">
+                <div> <img class="imagen_perfil" src="img/20240222_115912-removebg-preview.png" alt="imagen_perfil">
+                </div>
+                <div class="datos_usuario" id="contenedor_reseña">
+                    <div class="persona">
+                        <h1>Pedro Olortegui Mendieta</h1>
+                    </div>
+                    <div class="texto_reseña">
+                    </div>
+
+                </div>
+            </div>
+        </aside>
+
+        <main>
+            <span class="migas_pan">Usted esta aqui:<a href="index.html">INICIO</a></span>
+            <h1 class="titulo_main">Pizarra de Cotizaciones</h1>
+
+            <!-- Filtro -->
+            <div class="filtro_cotizacion">
+                <label for="moneda">Seleccionar moneda:</label>
+                <select name="moneda" id="filtroCotizacion">
+                    <option value="todas">TODAS</option>
+                    <option value="oficial">Dólar Oficial</option>
+                    <option value="blue">Dólar Blue</option>
+                    <option value="bolsa">Dólar Bolsa (MEP)</option>
+                    <option value="contadoconliqui">Dólar Contado con Liqui (CCL)</option>
+                    <option value="tarjeta">Dólar Tarjeta</option>
+                    <option value="mayorista">Dólar Mayorista</option>
+                    <option value="cripto"> Dólar Cripto</option>
+                    <option value="eur">Euro</option>
+                    <option value="brl"> Real Brasileño</option>
+                    <option value="clp"> Peso Chileno</option>
+                    <option value="uyu"> Peso Uruguayo</option>
+                    <!-- Agrega las opciones restantes aquí -->
+                </select>
+                <button class="action-btn" id="botonFiltrar"><i class="fas fa-filter"></i></button>
+            </div>
+            <!-- Título y última actualización -->
+            <div class="titulo-y-actualizacion">
+                <p>Última actualización: <span id="ultima-actualizacion"></span></p>
+            </div>
+
+            <!-- Grilla de cotizaciones -->
+            <div class="grilla_cotizaciones" id="cotizacionesContainer">
+                <!-- Contenido de la grilla -->
+            </div>
+            <!-- Contenedor del mensaje de error -->
+            <div id="error-container" class="modal" style="display:none;">
+                <div id="error-message" class="modal-content alert alert-error">
+                    ERROR: Ha ocurrido un error al intentar consultar los datos.
+                </div>
+
+            </div>
+            <div class="guardar_favoritos">
+                <div class="texto_favoritos">
+                    <p>!Haga click en la estrella para guardar los datos de cotizacion en sus favoritos</p>
+                </div>
+                <div class="enlace_favoritos">
+                    <p>Datos obtenidos de: <a href="DolarApi.com">DolarApi.com</a></p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div class="contenedor_footer">
+            <div class="contenedor">
+                <h1 class="titulo_primero">Institucional</h1>
+                <ul>
+                    <li><a href="#">¿Quienes somos?</a></li>
+                    <li><a href="#">Socios Estratégicos</a></li>
+                    <li><a href="#">Trabaje con Nosotros</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                </ul>
+            </div>
+            <div class="contenedor">
+                <h1 class="titulo_primero">Accesos</h1>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="Miarchivo.html">Mi Archivo</a></li>
+                    <li><a href="informes.html">Informes</a></li>
+                    <li><a href="contacto.html">Contáctenos</a></li>
+                </ul>
+            </div>
+            <div class="contenedor">
+                <h1 class="titulo_primero">Contacto</h1>
+                <ul>
+                    <li>Universidad Tecnológica Nacional</li>
+                    <li>ZEBALLOS 1341 - S2000BQA - </li>
+                    <li>Rosario</li>
+                    <li>0341-4481871</li>
+                    <li class="final"><b>¡Escribenos!</b></li>
+                </ul>
+
+            </div>
+            <div class="contenedor_final">
+                <h1><b>Desarrollado por:</b></h1>
+                <ul class="contenedor_final_ul">
+                    <li><b>Pedro Olortegui Mendieta</b></li>
+                    <li><b>TUP06-2024</b></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="pie_pagina">
+            <p>TUP - Cátedra de Laboratorio de Computacion 2 - Año 2024</p>
+        </div>
+    </footer>
+    <script src="js/index.js" defer></script>
+</body>
+
+</html>

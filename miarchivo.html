@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miarchivo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/pages/miarchivo.css">
+</head>
+<body>
+    <header class="header">
+        <div class="barra_navegacion">
+            <nav class="nav_enlaces">
+                <a href="index.html" class="navegacion_enlaces"><b>INICIO</b></a>
+                <a href="contactos.html" class="navegacion_enlaces"><b>CONTACTOS</b></a>
+                <a href="informes.html" class="navegacion_enlaces"><b>INFORMES</b></a>
+            </nav>
+        </div>
+        <div class="header_texto">
+            <img class="logo_imagen" src="img/logo.png" alt="logo_imagen">
+            <h1 class="titulo">Cotizador de Monedas</h1>
+        </div>
+    </header>
+    <main>
+        <div class="contenido_principal"> 
+            <div class="cabecera_main">
+                <div class="titulo_archivo">
+                    <h1>Mi Archivo</h1>
+                </div>
+                <div class="imagen_archivo" id="btnImprimir">
+                    <img src="img/impresora.png" alt="impresora_cabecera">
+                </div>
+            </div>
+            <div class="container" id="tablaParaImprimir">
+                <div class="migas_pan">Usted está aquí: <a href="index.html">INICIO</a>/<a href="miarchivo.html">MI ARCHIVO</a></div>
+                <table class="table">
+                    <thead>
+                        <tr class="titulos_table">
+                            <th>FECHA</th>
+                            <th>MONEDA</th>
+                            <th>COMPRA</th>
+                            <th>VENTA</th>
+                            <th>ACCIÓN</th>
+                        </tr>
+                    </thead>
+                    <tbody id="archivoContainer">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="contenedor_footer">
+            <div class="contenedor">
+                <h1 class="titulo_primero">Institucional</h1>
+                <ul>
+                    <li><a href="#">¿Quienes somos?</a></li>
+                    <li><a href="#">Socios Estratégicos</a></li>
+                    <li><a href="#">Trabaje con Nosotros</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                </ul>
+            </div>
+            <div class="contenedor">
+                <h1 class="titulo_primero">Accesos</h1>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="Miarchivo.html">Mi Archivo</a></li>
+                    <li><a href="informes.html">Informes</a></li>
+                    <li><a href="contacto.html">Contáctenos</a></li>
+                </ul>
+            </div>
+            <div class="contenedor">
+                <h1 class="titulo_primero">Contacto</h1>
+                <ul>
+                    <li>Universidad Tecnológica Nacional</li>
+                    <li>ZEBALLOS 1341 - S2000BQA - </li>
+                    <li>Rosario</li>
+                    <li>0341-4481871</li>
+                    <li class="final"><b>¡Escríbenos!</b></li>
+                </ul>
+            </div>
+            <div class="contenedor_final">
+                <h1><b>Desarrollado por:</b></h1>
+                <ul class="contenedor_final_ul">
+                    <li><b>Pedro Olortegui Mendieta</b></li>
+                    <li><b>TUP06-2024</b></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pie_pagina"><p>TUP - Cátedra de Laboratorio de Computación 2 - Año 2024</p></div>
+    </footer>
+
+    <script src="js/miarchivo.js"></script>
+</body>
+</html>

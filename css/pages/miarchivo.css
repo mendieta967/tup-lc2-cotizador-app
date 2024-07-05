@@ -1,0 +1,340 @@
+:root {
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+    --primario: #784d3c;
+    --blanco: #fff;
+    --negro: #070707;
+    --gris: #434242;
+    --fondo: #d3c5c5;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* Para que 1rem = 10px */
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+}
+
+.barra_navegacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .barra_navegacion {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.nav_enlaces {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .nav_enlaces {
+        flex-direction: row;
+        margin-left: 5%;
+        gap: 2rem;
+    }
+}
+
+.navegacion_enlaces {
+    display: block;
+    color: #121212;
+    font-family: 'Georgia', serif;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.984);
+    padding: 10px 15px;
+    border-radius: 5px; 
+}
+
+.navegacion_enlaces:hover {
+    background-color: var(--gris);
+}
+
+.header {
+    background-image: url(../../img/cabecera.jpg);
+    height: 21rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.header_texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--negro);
+    text-align: center;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .header_texto {
+        flex-direction: row;
+        gap: 3rem;
+    }
+}
+
+.header .logo_imagen {
+    width: 8rem;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 768px) {
+    .header .logo_imagen {
+        width: 5rem; /* Reduce the size of the image */
+    }
+}
+
+.header .titulo {
+    font-size: 5rem;
+    color: #121212;
+    font-family: 'Georgia', serif;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.984);
+    border-bottom: 4px solid var(--blanco);
+    padding: 10px 15px;
+    border-radius: 5px; 
+}
+
+@media (min-width: 768px) {
+    .header .titulo {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header .titulo {
+        font-size: 2.5rem; /* Reduce the font size for smaller screens */
+    }
+}
+
+
+.cabecera_main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--primario);
+    align-items: center;
+    width: 100%;
+}
+
+.titulo_archivo {
+    text-align: center;
+    font-size: 10px;
+    margin-left: 45%;
+    align-items: center;
+    color: var(--blanco);
+    font-family: 'Georgia', serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.984);
+    padding: 10px 15px;
+    border-radius: 5px; 
+}
+
+.imagen_archivo {
+    margin-right: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+.imagen_archivo img {
+    width: 4rem;
+}
+
+.migas_pan {
+    font-size: 10px;
+    margin-right: 10%;
+    text-align: end;
+    margin-bottom: 1%;
+    color: var(--blanco);
+    text-shadow: 2px 2px 5px rgba(232, 250, 94, 0.984);
+    border-radius: 5px;
+}
+
+.migas_pan a {
+    color: var(--blanco);
+    margin-left: 5px;
+    text-decoration: none;
+    text-shadow: 2px 2px 5px rgba(232, 250, 94, 0.984);
+    border-radius: 5px;
+}
+.container {
+    background-color: var(--fondo);
+    padding: 20px;
+}
+
+.table {
+    background-color: var(--blanco);
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+    border-radius: 2em;
+}
+
+tbody { display: block;     height: 400px;     overflow: auto; } 
+
+thead, tbody tr {     display: table;     width: 100%;    
+ table-layout: fixed; } 
+
+.titulos_table th {
+    background-color: var(--blanco);
+    border-radius: 1em;
+}
+
+th {
+    background-color: var(--fondo);
+}
+
+td {
+    padding: 1px;
+    font-size: 1.5rem;
+}
+
+.tr_fecha td {
+    background: var(--gris);
+    color: var(--blanco);
+}
+
+.td_border {
+    border-left: solid 5px gray;
+    border-right: solid 5px gray;
+    font-size: 1.5rem;
+    margin: 1px 0;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    font-size: 2.4rem;
+    color: var(--negro);
+    cursor: pointer;
+}
+
+.eliminar-btn {
+    color: red; /* Color del botón de eliminar */
+}
+
+.eliminar-btn:hover {
+    color: darkred; /* Cambio de color al pasar el ratón */
+}
+
+@media (min-width: 768px) {
+    .contenedor_footer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+    }
+}
+footer {
+    background-color: var(--negro);
+    padding: 2rem 0;
+    color: var(--blanco);
+   
+}
+/*Contenedor1*/
+.contenedor{
+    margin-left:20%;
+}
+
+.contenedor_final{
+    text-align: right;
+    margin-right: 30%;
+    margin-top: 8%;
+}
+.contenedor_final h1{
+    font-size: 10px;
+}
+.contenedor_final_ul li{
+display: inline-block;
+justify-content: left;
+font-style: italic;
+
+}
+
+.contenedor_final li{
+    font-size: 15px;
+    list-style: none;
+    text-align: center;
+}
+.titulo_primero{
+    font-size: 15px;
+    margin-left: 10%;
+    
+}
+.contenedor li{
+    font-size: 10px;
+    list-style: none;
+
+}
+.contenedor li a{
+    color: var(--blanco);
+}
+.contenedor .final{
+    font-size: 10px;
+    margin-left: 45%;
+}
+.contenedor_info{
+    margin-left:20%;
+    font-size: 10px;
+    margin-top: 15%;
+}
+.pie_pagina{
+    background-color: var(--negro);
+    text-align: center;
+    color: var(--blanco);
+    padding: 3rem 0;
+    font-size: 15px;
+
+}
+@media (max-width: 768px) {
+    .header .titulo {
+        font-size: 2.5rem; /* Reduce title size */
+    }
+
+    .cabecera_main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .titulo_archivo {
+        margin-left: 0;
+    }
+
+    .imagen_archivo {
+        margin: 0;
+    }
+
+    .migas_pan {
+        font-size: 1rem; /* Reduce breadcrumb font size */
+        text-align: center;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    td, .td_border {
+        font-size: 1.4rem; /* Reduce table cell font size */
+    }
+
+    .action-btn {
+        font-size: 2rem;
+    }
+}
+

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/pages/contactos.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js" defer></script>
+</head>
+<body>
+    <header class="header">
+
+            <div class="barra_navegacion">
+              <nav class="nav_enlaces">
+                 <a href="index.html" class="navegacion_enlaces"><b>INICIO</b></a>
+                 <a href="miarchivo.html" class="navegacion_enlaces"><b>MI ARCHIVO</b></a>
+                 <a href="informes.html" class="navegacion_enlaces"><b>INFORMES</b></a>
+              </nav>
+          </div>
+
+        <div class="header_texto">
+            <img class="logo_imagen" src="img/logo.png" alt="logo_imagen">
+            <h1 class="titulo">Cotizador de Monedas</h1>
+        </div>
+        
+    </header>
+    <main>
+        <div class="migas_pan">Usted esta aqui: <a href="index.html">INICIO </a>/<a href="contactos.html">CONTACTOS</a></div>
+        <h1 class="titulo_contactos">Contacto web Cotizaciones</h1>
+        
+        <div class="contenedor_principal">
+            <div class="formulario">
+                <h1 class="titulo_formulario">Datos de Contacto:</h1>
+                <form action="#" method="post" target="_blank" id="contactForm">
+                    <div class="nombre_contacto">
+                        <label for="nombre"> <b>Nombre:</b></label>
+                        <input type="text" id="nombre" name="nombre">
+                    </div>
+                    <div class="email_contactos">
+                        <label for="email"><b>Email:</b></label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="container">
+                        <label for="mensaje"><b>Mensaje:</b></label>
+                        <textarea name="mensaje" rows="5" id="mensaje"></textarea>
+                    </div>
+                    <div class="botones">
+                        <input type="reset" value="Limpiar" class="boton_limpiar">
+                        <input type="submit" value="Enviar" class="boton_enviar">
+                    </div>
+                </form>
+            </div>
+            <div class="contenedor_informacion">
+                <div class="texto_main">
+                    <p>Si tiene alguna sugerencia o inconveniente por favor complete<br>
+                       el siguiente formulario y envienoslo.  Lo contactaremos en brevedad. <br>
+                       Esta web esta desarrollada utilizando <a href="https://dolarapi.com/">https://dolarapi.com/</a>
+                    </p>
+                </div>
+                <div class="contacto_contenedor">
+                 <div class="datos_contacto">
+                    <h1>Contacto</h1>
+                    <ul>
+                        <li>Universidad Tecnológica Nacional</li>
+                        <li>ZEBALLOS 1341 - S2000BQA </li>
+                        <li>Rosario</li>
+                        <li>0341-4481871</li>
+
+                    </ul>
+                 </div>
+                 <div class="logo_utn">
+                    <img src="img/UTN_logo.png" alt="logo_utn">
+                 </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="contenedor_footer">
+            <div class="contenedor">
+                <h1 class="titulo_primero">Institucional</h1>
+                <ul>
+                    <li><a href="#">¿Quienes somos?</a></li>
+                    <li><a href="#">Socios Estratégicos</a></li>
+                    <li><a href="#">Trabaje con Nosotros</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                </ul>
+            </div>
+            <div class="contenedor">
+                <h1 class="titulo_primero">Accesos</h1>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="Miarchivo.html">Mi Archivo</a></li>
+                    <li><a href="informes.html">Informes</a></li>
+                    <li><a href="contacto.html">Contáctenos</a></li>
+                </ul>
+            </div>
+            <div class="contenedor">
+                <h1 class="titulo_primero">Contacto</h1>
+                <ul>
+                    <li>Universidad Tecnológica Nacional</li>
+                    <li>ZEBALLOS 1341 - S2000BQA - </li>
+                    <li>Rosario</li>
+                    <li>0341-4481871</li>
+                    <li class="final"><b>¡Escribenos!</b></li>
+                </ul>
+
+            </div>
+            <div class="contenedor_final">
+                <h1><b>Desarrollado por:</b></h1>
+                <ul class="contenedor_final_ul">
+                    <li><b>Pedro Olortegui Mendieta</b></li>
+                    <li><b>TUP06-2024</b></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="pie_pagina"><p>TUP - Cátedra de Laboratorio de Computacion 2 - Año 2024</p></div>
+    </footer>
+    <script src="js/contactos.js" defer></script>
+</body>
+</html>
